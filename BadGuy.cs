@@ -1,18 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BadGuy : MonoBehaviour
+public class BadGuy : IComparable<BadGuy>
 {
-    // Start is called before the first frame update
-    void Start()
+    public string name;
+    public int power;
+    
+    public BadGuy(string newName, int newPower)
     {
-        
+        name = newName;
+        power = newPower;
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    public int CompareTo(BadGuy other)
     {
-        
+        if (other == null)
+        {
+            return 1;
+        }
+
+        return power - other.power;
     }
 }
