@@ -19,6 +19,6 @@ public class CapsuleList : MonoBehaviour
 
     public void Spawn()
     {
-        CapsuleList.Add(Instantiate(sphere.gameObject, new vector3(Random.Range(-4.0f, 4.0f), 2, (Random.Range(-4.0f, 4.0f)), Quaternion.identity));
+        CapsuleList.Add(Instantiate(sphere.gameObject, new Vector3(Random.Range(-4.0f, 4.0f), 2, (Random.Range(-4.0f, 4.0f)), Quaternion.identity));
     }
 }
