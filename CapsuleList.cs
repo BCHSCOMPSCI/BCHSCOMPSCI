@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class CapsuleList : MonoBehaviour
+public class CapsuleController : MonoBehaviour
 {
 
     public List<GameObject> CapsuleList = new List<GameObject>();
@@ -19,6 +19,6 @@ public class CapsuleList : MonoBehaviour
 
     public void Spawn()
     {
-        CapsuleList.Add(Instantiate(sphere.gameObject, new Vector3(Random.Range(-4.0f, 4.0f), 2, Random.Range(-4.0f, 4.0f)), Quaternion.identity));
+        CapsuleList.Add(Instantiate(capsule.gameObject, new Vector3(Random.Range(-4.0f, 4.0f), 2, Random.Range(-4.0f, 4.0f)), Quaternion.identity));
     }
 }
